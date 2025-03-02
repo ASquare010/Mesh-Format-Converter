@@ -1,0 +1,17 @@
+services:
+  blender_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      APP_ROOT: /a_square/app
+      CACHE_ROOT: /a_square/.cache
+      PORT: 7860
+    volumes:
+      - ./src:/a_square/app/src
+      - cache_data:/a_square/.cache
+    ports:
+      - "7860:7860"
+
+volumes:
+  cache_data:

@@ -1,6 +1,6 @@
 import uuid, zipfile, shutil, os, sys, bpy, re
 
-CACHE_ROOT = os.environ.get("CACHE_ROOT", "/vizcom/.cache")
+CACHE_ROOT = os.environ.get("CACHE_ROOT", "/a_square/.cache")
 
 def pack_obj_with_textures(temp_export_dir, output_path):
     image_name_mapping = {}
